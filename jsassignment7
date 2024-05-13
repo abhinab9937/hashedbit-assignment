@@ -1,0 +1,30 @@
+<button type="button" class="btn btn-primary" onclick="toggleModal()">
+  Launch demo modal
+</button>
+
+<div id="exampleModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" onclick="toggleModal()"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Your modal content goes here -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="toggleModal()">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleModal() {
+    const modal = document.getElementById('exampleModal');
+    modal.classList.toggle('show');
+    modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+    document.body.classList.toggle('modal-open');
+  }
+</script>
